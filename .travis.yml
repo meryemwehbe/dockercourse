@@ -6,4 +6,4 @@ before_install:
   - docker build -t meryemwehbe/dockercourse -f Dockerfile.dev .
 
 script:
-  - docker run meryemwehbe/dockercourse npm run test -- --coverage
+  - docker run -e CI=true meryemwehbe/dockercourse npm run test
